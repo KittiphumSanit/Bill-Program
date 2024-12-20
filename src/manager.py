@@ -16,7 +16,6 @@ def genNewBill(firstFile,secondFile):
     saveDATA(secondFileData,secondFile)
 
 
-
 def getRoom(fileName):
 
     data = readDATA(fileName)
@@ -30,4 +29,19 @@ def setRoomUnit(fileName,roomNumber,value):
 
     data = readDATA(fileName)
     data.get("Room")[roomNumber-1]["This_Month"] = value
+
+    saveDATA(data,fileName)
+
+def update(fileName,value):
+
+    data = readDATA(fileName)
+
+    i = 0
+    for r in data.get("Room"):
+        r["This_Month"] = value[i]
+        r["Unit"] = r["This_Month"] - r["Before_Month"]
+        r["Electricity_Value"] = r["Unit"] * data.get("Electricity_Price")
+        r["Debt"] = data.get("Rent_Price") + r["Electricity_Value"]
+        i += 1
+
     saveDATA(data,fileName)
