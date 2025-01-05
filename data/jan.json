@@ -84,11 +84,11 @@
         },
         {
             "Number": 11,
-            "This_Month": 5450,
+            "This_Month": 5950,
             "Before_Month": 5809,
-            "Unit": -359,
-            "Electricity_Value": -2154,
-            "Debt": 346
+            "Unit": 141,
+            "Electricity_Value": 846,
+            "Debt": 3346
         },
         {
             "Number": 12,
