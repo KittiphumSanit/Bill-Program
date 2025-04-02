@@ -1,0 +1,134 @@
+{
+    "Rent_Price": 2500,
+    "Electricity_Price": 6,
+    "Room": [
+        {
+            "Number": 1,
+            "This_Month": 8469,
+            "Before_Month": 8408,
+            "Unit": 61,
+            "Electricity_Value": 366,
+            "Debt": 2866
+        },
+        {
+            "Number": 2,
+            "This_Month": 4889,
+            "Before_Month": 4864,
+            "Unit": 25,
+            "Electricity_Value": 150,
+            "Debt": 2650
+        },
+        {
+            "Number": 3,
+            "This_Month": 4510,
+            "Before_Month": 4461,
+            "Unit": 49,
+            "Electricity_Value": 294,
+            "Debt": 2794
+        },
+        {
+            "Number": 4,
+            "This_Month": 4868,
+            "Before_Month": 4776,
+            "Unit": 92,
+            "Electricity_Value": 552,
+            "Debt": 3052
+        },
+        {
+            "Number": 5,
+            "This_Month": 5165,
+            "Before_Month": 5039,
+            "Unit": 126,
+            "Electricity_Value": 756,
+            "Debt": 3256
+        },
+        {
+            "Number": 6,
+            "This_Month": 6271,
+            "Before_Month": 6189,
+            "Unit": 82,
+            "Electricity_Value": 492,
+            "Debt": 2992
+        },
+        {
+            "Number": 7,
+            "This_Month": 2391,
+            "Before_Month": 2374,
+            "Unit": 17,
+            "Electricity_Value": 102,
+            "Debt": 2602
+        },
+        {
+            "Number": 8,
+            "This_Month": 5375,
+            "Before_Month": 5330,
+            "Unit": 45,
+            "Electricity_Value": 270,
+            "Debt": 2770
+        },
+        {
+            "Number": 9,
+            "This_Month": 8407,
+            "Before_Month": 8263,
+            "Unit": 144,
+            "Electricity_Value": 864,
+            "Debt": 3364
+        },
+        {
+            "Number": 10,
+            "This_Month": 3962,
+            "Before_Month": 3937,
+            "Unit": 25,
+            "Electricity_Value": 150,
+            "Debt": 2650
+        },
+        {
+            "Number": 11,
+            "This_Month": 6048,
+            "Before_Month": 5950,
+            "Unit": 98,
+            "Electricity_Value": 588,
+            "Debt": 3088
+        },
+        {
+            "Number": 12,
+            "This_Month": 4883,
+            "Before_Month": 4861,
+            "Unit": 22,
+            "Electricity_Value": 132,
+            "Debt": 2632
+        },
+        {
+            "Number": 13,
+            "This_Month": 6216,
+            "Before_Month": 6188,
+            "Unit": 28,
+            "Electricity_Value": 168,
+            "Debt": 2668
+        },
+        {
+            "Number": 14,
+            "This_Month": 6548,
+            "Before_Month": 6484,
+            "Unit": 64,
+            "Electricity_Value": 384,
+            "Debt": 2884
+        },
+        {
+            "Number": 15,
+            "This_Month": 3944,
+            "Before_Month": 3842,
+            "Unit": 102,
+            "Electricity_Value": 612,
+            "Debt": 3112
+        },
+        {
+            "Number": 16,
+            "This_Month": 6481,
+            "Before_Month": 6458,
+            "Unit": 23,
+            "Electricity_Value": 138,
+            "Debt": 2638
+        }
+    ]
+}

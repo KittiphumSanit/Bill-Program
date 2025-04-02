@@ -50,19 +50,34 @@ def create_pdf(m):
         # Add some spacing
         elements.append(Paragraph("<br/><br/>", styles["Normal"]))
 
+
         # Table data (with merged cells)
-        data = [
-            [f"ห้อง {dataMonth.get("Room")[i]['Number']}", "", "", "วันที่", f"{str(date.day) + '/' + str(date.month) + '/' + str(date.year+543)}"],
-            ["ลำดับ", "รายการ", "จำนวนหน่อย", "ราคาต่อหน่วย", "จำนวนเงิน"],  # Merged cell text in Thai
-            ["1", "ค่าเช่า", '1', f"{dataMonth.get("Rent_Price")}", f"{dataMonth.get("Rent_Price")*1}"],
-            ["2", "ค่าไฟ", f"{dataMonth.get("Room")[i]['Unit']}", f"{dataMonth.get("Electricity_Price")}", f"{dataMonth.get("Room")[i]['Electricity_Value']}"],
-            ["", "", "", "", ""],
-            ["", "", "", "", ""],
-            [f"({bahttext(dataMonth.get("Room")[i]['Debt'])})", "", "", "จำนวนเงินรวม", f"{dataMonth.get("Room")[i]['Debt']}"],
-            ["หมายเหตุ กรุณาโอนเงินมาที่บัญชี \"นางสาว กรรณิกา สนิท\"", "", "", "", ""],
-            ["ธนาคารเพื่อการเกษตรและสหกรณ์การเกษตร(ธกส) เลขบัญชี 020142880900", "", "", "", ""],
-            ["", "", "", "", ""],
-        ]
+        if dataMonth.get("Room")[i]['Out'] == True:
+            data = [
+                [f"ห้อง {dataMonth.get("Room")[i]['Number']}", "", "", "วันที่", f"{str(date.day) + '/' + str(date.month) + '/' + str(date.year+543)}"],
+                ["ลำดับ", "รายการ", "จำนวนหน่อย", "ราคาต่อหน่วย", "จำนวนเงิน"],  # Merged cell text in Thai
+                ["1", "ค่าทำความสะอาด", '1', f"{dataMonth.get("Cleaner")}", f"{dataMonth.get("Cleaner")*1}"],
+                ["2", "ค่าไฟ", f"{dataMonth.get("Room")[i]['Unit']}", f"{dataMonth.get("Electricity_Price")}", f"{dataMonth.get("Room")[i]['Electricity_Value']}"],
+                ["", "", "", "", ""],
+                ["", "", "", "", ""],
+                [f"({bahttext(dataMonth.get("Room")[i]['Debt'])})", "", "", "จำนวนเงินรวม", f"{dataMonth.get("Room")[i]['Debt']}"],
+                ["หมายเหตุ กรุณาโอนเงินมาที่บัญชี \"นางสาว กรรณิกา สนิท\"", "", "", "", ""],
+                ["ธนาคารเพื่อการเกษตรและสหกรณ์การเกษตร(ธกส) เลขบัญชี 020142880900", "", "", "", ""],
+                ["", "", "", "", ""],
+            ]
+        else:  
+            data = [
+                [f"ห้อง {dataMonth.get("Room")[i]['Number']}", "", "", "วันที่", f"{str(date.day) + '/' + str(date.month) + '/' + str(date.year+543)}"],
+                ["ลำดับ", "รายการ", "จำนวนหน่อย", "ราคาต่อหน่วย", "จำนวนเงิน"],  # Merged cell text in Thai
+                ["1", "ค่าเช่า", '1', f"{dataMonth.get("Rent_Price")}", f"{dataMonth.get("Rent_Price")*1}"],
+                ["2", "ค่าไฟ", f"{dataMonth.get("Room")[i]['Unit']}", f"{dataMonth.get("Electricity_Price")}", f"{dataMonth.get("Room")[i]['Electricity_Value']}"],
+                ["", "", "", "", ""],
+                ["", "", "", "", ""],
+                [f"({bahttext(dataMonth.get("Room")[i]['Debt'])})", "", "", "จำนวนเงินรวม", f"{dataMonth.get("Room")[i]['Debt']}"],
+                ["หมายเหตุ กรุณาโอนเงินมาที่บัญชี \"นางสาว กรรณิกา สนิท\"", "", "", "", ""],
+                ["ธนาคารเพื่อการเกษตรและสหกรณ์การเกษตร(ธกส) เลขบัญชี 020142880900", "", "", "", ""],
+                ["", "", "", "", ""],
+            ]
 
         # Create the table with custom column widths
         table = Table(data, colWidths=[50, 100, 80, 80, 80])  # Adjust widths as needed

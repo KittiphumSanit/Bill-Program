@@ -1,6 +1,7 @@
 {
     "Rent_Price": 2500,
     "Electricity_Price": 6,
+    "Cleaner": 300,
     "Room": [
         {
             "Number": 1,

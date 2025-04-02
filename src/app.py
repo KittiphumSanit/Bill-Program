@@ -1,45 +1,39 @@
-import sys
-from PyQt5.QtWidgets import QApplication, QWidget, QLabel, QPushButton, QLineEdit, QVBoxLayout
+import tkinter as tk
+# from tkinter import ttk
+import ttkbootstrap as ttk
+from billgenerate import create_pdf
+
+def confirm():
+    # create_pdf(entry_int.get())
+    output_string.set(f'{entry_int.get()}')
+    # label.configure(text='sdsdasd')
+
+# window
+window = ttk.Window(themename='darkly')
+window.title('Demo')
+window.geometry('500x300')
+
+# title
+title_label = ttk.Label(master=window, text='Bill Generate', font='Calibri 24 bold').pack()
+
+# input field
+input_frame = ttk.Frame(master=window)
+entry_int = tk.IntVar()
+entry = ttk.Entry(master=input_frame, textvariable=entry_int).pack(side='left', padx=10)
+button = ttk.Button(master=input_frame, text = 'confirm', command=confirm).pack(side='left')
+input_frame.pack(pady=10)
+
+# output
+# label = ttk.Label(master=window, text='Text from Input').pack()
+output_string = tk.StringVar()
+output_label = ttk.Label(
+    master=window, 
+    text='Success', 
+    font='Calibri 24 bold', 
+    textvariable=output_string).pack(pady=5)
+
+# run
+window.mainloop()
 
 
-class SimpleApp(QWidget):
-    def __init__(self):
-        super().__init__()
-        self.init_ui()
 
-    def init_ui(self):
-        # Create widgets
-        self.label = QLabel("Hello, PyQt5!", self)
-        self.text_input = QLineEdit(self)
-        self.text_input.setPlaceholderText("Enter some text here")
-        self.display_label = QLabel("", self)
-        self.button = QPushButton("Update Label", self)
-
-        # Connect button click to handler
-        self.button.clicked.connect(self.on_button_click)
-
-        # Arrange widgets using a vertical layout
-        layout = QVBoxLayout()
-        layout.addWidget(self.label)
-        layout.addWidget(self.text_input)
-        layout.addWidget(self.display_label)
-        layout.addWidget(self.button)
-
-        self.setLayout(layout)
-
-        # Window settings
-        self.setWindowTitle("PyQt5 Example with Input")
-        self.setGeometry(100, 100, 300, 200)
-
-    def on_button_click(self):
-        # Update display_label with the text from text_input
-        input_text = self.text_input.text()
-        self.display_label.setText(f"You entered: {input_text}")
-
-
-# Main application logic
-if __name__ == "__main__":
-    app = QApplication(sys.argv)
-    main_window = SimpleApp()
-    main_window.show()
-    sys.exit(app.exec_())
